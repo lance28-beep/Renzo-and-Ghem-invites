@@ -30,7 +30,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What time should I arrive?",
     answer:
-      `Kindly arrive by ${siteConfig.ceremony.guestsTime} so we can begin the ceremony promptly at exactly ${siteConfig.ceremony.time}. The entourage will arrive at ${siteConfig.ceremony.entourageTime}. Your punctuality means so much to us!`,
+      `Kindly arrive by ${siteConfig.ceremony.guestsTime} so we can begin the ceremony promptly at exactly ${siteConfig.ceremony.time}.`,
   },
   {
     question: "How do I RSVP?",

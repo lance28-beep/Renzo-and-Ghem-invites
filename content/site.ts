@@ -25,7 +25,7 @@ export const siteConfig = {
     day: "Sunday",
     time: "5:00PM",
     entourageTime: "3:30 PM",
-    guestsTime: "3:30 PM",
+    guestsTime: "4:30 PM",
   },
   reception: {
     location: "CASA ANTONIA, MANGALDAN, PANGASINAN",
