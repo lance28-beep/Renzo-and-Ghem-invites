@@ -99,18 +99,8 @@ export function Footer() {
 
   return (
     <footer 
-      className="relative z-20 mt-12 sm:mt-16 overflow-hidden bg-gradient-to-br from-[#540000] via-[#740403] to-[#540000]"
+      className="relative z-20 mt-12 sm:mt-16 overflow-hidden bg-[#540000]"
     >
-      {/* Background elements with maroon motif */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Vertical gradients to frame the footer */}
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#540000]/90 via-[#740403]/78 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#540000]/88 via-[#740403]/70 to-transparent" />
-        {/* Soft radial light */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(116,4,3,0.42),transparent_55%)] opacity-90" />
-        {/* Subtle diagonal wash */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#740403]/30 via-transparent to-[#540000]/24 mix-blend-soft-light" />
-      </div>
 
       {/* Top-left corner decoration */}
       <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
@@ -193,10 +183,10 @@ export function Footer() {
           <motion.div className="lg:col-span-2" variants={fadeInUp}>
             <div className="mb-5 sm:mb-6 md:mb-8">
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-5">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#E1C49C]/15 rounded-full flex items-center justify-center border border-[#E1C49C]/30 flex-shrink-0 shadow-[0_0_22px_rgba(229,196,156,0.4)]">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#E1C49C]/15 rounded-full flex items-center justify-center border border-[#E1C49C]/30 flex-shrink-0">
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 text-[#E1C49C]" fill="#E1C49C" />
                 </div>
-                <h3 className="style-script-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#E1C49C] drop-shadow-lg">{siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}</h3>
+                <h3 className="style-script-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#E1C49C]">{siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}</h3>
               </div>
               <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
                 <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#E1C49C]/95`}>
@@ -210,7 +200,7 @@ export function Footer() {
               </div>
             </div>
 
-            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-[#E1C49C]/30 shadow-[0_18px_45px_rgba(229,196,156,0.3)]" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-[#E1C49C]/30" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
               <blockquote className={`${cormorant.className} text-[#E1C49C]/95 italic text-sm sm:text-base md:text-lg leading-relaxed min-h-[60px] sm:min-h-[70px] md:min-h-[80px]`}>
                 "{displayedText}
                 <span className="inline-block w-0.5 h-4 sm:h-5 md:h-6 bg-[#E1C49C] ml-1 animate-pulse">|</span>"
@@ -225,7 +215,7 @@ export function Footer() {
 
           {/* Event Details quick tiles */}
           <motion.div className="space-y-3 sm:space-y-4 md:space-y-5" variants={fadeInUp}>
-            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#E1C49C]/30 hover:bg-[#E1C49C]/15 transition-all duration-300 shadow-[0_14px_40px_rgba(229,196,156,0.25)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#E1C49C]/30 hover:bg-[#E1C49C]/15 transition-all duration-300" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2.5 sm:mb-3 md:mb-4">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-[#E1C49C]/15 rounded-full flex items-center justify-center border border-[#E1C49C]/30 flex-shrink-0">
                   <Clock className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-[#E1C49C]" />
@@ -244,7 +234,7 @@ export function Footer() {
               </div>
             </motion.div>
 
-            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#E1C49C]/30 hover:bg-[#E1C49C]/15 transition-all duration-300 shadow-[0_14px_40px_rgba(229,196,156,0.25)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+            <motion.div className="bg-[#E1C49C]/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#E1C49C]/30 hover:bg-[#E1C49C]/15 transition-all duration-300" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2.5 sm:mb-3 md:mb-4">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-[#E1C49C]/15 rounded-full flex items-center justify-center border border-[#E1C49C]/30 flex-shrink-0">
                   <Heart className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-[#E1C49C]" fill="#E1C49C" />

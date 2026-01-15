@@ -28,18 +28,8 @@ export function Narrative() {
   return (
     <Section
       id="narrative"
-      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-[#540000] via-[#740403] to-[#540000]"
+      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#540000]"
     >
-      {/* Background elements with maroon motif */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Vertical gradients to frame the story */}
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#540000]/90 via-[#740403]/78 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#540000]/88 via-[#740403]/70 to-transparent" />
-        {/* Soft radial light */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(116,4,3,0.42),transparent_55%)] opacity-90" />
-        {/* Subtle diagonal wash */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#740403]/30 via-transparent to-[#540000]/24 mix-blend-soft-light" />
-      </div>
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
