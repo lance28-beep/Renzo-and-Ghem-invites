@@ -118,7 +118,7 @@ export function Gallery() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Background image */}
         <img
-          src="/Details/newBackground.jpg"
+          src="/Details/Rubi.jpeg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30"

@@ -139,7 +139,7 @@ export function BookOfGuests() {
       {/* Background image - matching gallery */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
-          src="/Details/newBackground.jpg"
+          src="/Details/Rubi.jpeg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
@@ -150,20 +150,20 @@ export function BookOfGuests() {
       <div className="relative z-10 text-center mb-3 sm:mb-4 md:mb-6 px-2 sm:px-3 md:px-4">
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.6rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.25em] text-white/90 mb-1 sm:mb-1.5`}
+          className={`${cormorant.className} text-[0.6rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.25em] text-[#E1C49C] mb-1 sm:mb-1.5`}
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}
         >
           Our Cherished Guests
         </p>
 
         <h2
-          className="style-script-regular text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-1 sm:mb-2 md:mb-3"
+          className="style-script-regular text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#E1C49C] mb-1 sm:mb-2 md:mb-3"
           style={{ textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}
         >
           Book of Guests
         </h2>
 
-        <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-white/90 font-light max-w-lg mx-auto leading-relaxed px-2`}>
+        <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#E1C49C]/95 font-light max-w-lg mx-auto leading-relaxed px-2`}>
           Meet the cherished souls joining us in celebration — your presence makes our day truly special
         </p>
 

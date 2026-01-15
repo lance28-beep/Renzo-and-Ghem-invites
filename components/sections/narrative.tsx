@@ -58,12 +58,12 @@ export function Narrative() {
               Our Journey Together
             </p>
             <h2
-              className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white"
+              className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E1C49C]"
               style={{ textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}
             >
               Love Story
             </h2>
-            <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/95 font-light max-w-xl mx-auto leading-relaxed px-2 mt-2`}>
+            <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 font-light max-w-xl mx-auto leading-relaxed px-2 mt-2`}>
               A beautiful tale of two hearts finding each other and building forever together
             </p>
 

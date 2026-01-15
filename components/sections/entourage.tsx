@@ -253,7 +253,7 @@ export function Entourage() {
       {/* Background image - matching gallery */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
-          src="/Details/newBackground.jpg"
+          src="/Details/Rubi.jpeg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
@@ -266,14 +266,14 @@ export function Entourage() {
       <div className={`relative z-30 text-center mb-6 sm:mb-9 md:mb-12 px-3 sm:px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-white mb-2`}
+          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#E1C49C] mb-2`}
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}
         >
           Those who stand with {siteConfig.couple.groomNickname} &amp; {siteConfig.couple.brideNickname}
         </p>
 
         <h2
-          className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-1.5 sm:mb-3 md:mb-4"
+          className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E1C49C] mb-1.5 sm:mb-3 md:mb-4"
           style={{ textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}
         >
           Wedding Entourage
@@ -281,7 +281,7 @@ export function Entourage() {
 
         {/* Sublabel */}
         <p
-          className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/90 mb-3 sm:mb-4 md:mb-5 italic`}
+          className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 mb-3 sm:mb-4 md:mb-5 italic`}
           style={{ textShadow: "0 2px 8px rgba(0,0,0,0.7)" }}
         >
           Honoring those who share in our joy
