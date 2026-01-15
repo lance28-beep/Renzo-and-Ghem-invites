@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
+import { siteConfig } from '@/content/site';
 
 interface HeroProps {
   onOpen: () => void;
@@ -7,19 +8,19 @@ interface HeroProps {
 }
 
 const desktopImages: string[] = [
-  '/images/1st Part/1.webp',
-  '/images/1st Part/2.webp',
-  '/images/1st Part/3.webp',
-  '/images/1st Part/4.webp',
-  '/images/1st Part/5.webp',
+  '/desktop-background/couple (1).webp',
+  '/desktop-background/couple (2).webp',
+  '/desktop-background/couple (3).webp',
+  '/desktop-background/couple (4).webp',
+  '/desktop-background/couple (5).webp',
 ];
 
 const mobileImages: string[] = [
-  '/images/1st Part/1.webp',
-  '/images/1st Part/2.webp',
-  '/images/1st Part/3.webp',
-  '/images/1st Part/4.webp',
-  '/images/1st Part/5.webp',
+  '/mobile-background/couple (1).webp',
+  '/mobile-background/couple (2).webp',
+  '/mobile-background/couple (3).webp',
+  '/mobile-background/couple (4).webp',
+  '/mobile-background/couple (5).webp',
 ];
 
 export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
@@ -80,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44">
               <Image
                 src="/monogram/monogram.png"
-                alt="Daniel & Florence Monogram"
+                alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} Monogram`}
                 fill
                 className="object-contain"
                 priority

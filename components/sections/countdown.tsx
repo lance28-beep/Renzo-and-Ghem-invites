@@ -173,6 +173,40 @@ export function Countdown() {
       id="countdown"
       className="relative bg-transparent py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
     >
+      {/* Top-left corner decoration */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/top-left-corner.png"
+            alt=""
+            fill
+            className="object-contain object-top-left"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'top left'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Bottom-right corner decoration */}
+      <div className="absolute bottom-0 right-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/right-bottom-corner.png"
+            alt=""
+            fill
+            className="object-contain object-bottom-right"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'bottom right'
+            }}
+          />
+        </div>
+      </div>
+
       {/* Monogram - centered at top */}
       <div className="relative flex justify-center pt-8 sm:pt-10 md:pt-12 mb-6 sm:mb-8 md:mb-10 z-10">
         <motion.div

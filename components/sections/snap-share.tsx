@@ -22,7 +22,7 @@ export function SnapShare() {
 
   const websiteUrl = typeof window !== "undefined" ? window.location.href : "https://example.com"
   const driveLink = siteConfig.snapShare?.googleDriveLink || ""
-  const hashtags = ["#MAEgicalmomentwithDANIEL"]
+  const hashtags = ["#NorielAndGhemarie2026", "#NorielRenzoGhemarie", "#NorielGhemarieForever"]
   const allHashtagsText = hashtags.join(" ")
   const groomNickname = siteConfig.couple.groomNickname
   const brideNickname = siteConfig.couple.brideNickname
@@ -136,18 +136,31 @@ export function SnapShare() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] sm:text-xs tracking-[0.3em] uppercase text-white">
+          {/* Decorative element above title */}
+          <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+            <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+            <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A58169] to-[#751A23] rounded-full shadow-[0_0_12px_rgba(165,129,105,0.9)]" />
+            <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+          </div>
+
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-[#E1C49C]/30 bg-[#E1C49C]/10 px-3 py-1.5 text-[10px] sm:text-xs tracking-[0.3em] uppercase text-[#E1C49C]">
             Share Your Memories
           </div>
           <h2
-            className="style-script-regular text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-[0_18px_40px_rgba(10,0,25,0.8)] mt-2 sm:mt-4"
+            className="style-script-regular text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#E1C49C] drop-shadow-lg mt-2 sm:mt-4"
           >
             Capture & Share the Celebration
           </h2>
-          <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/90 max-w-2xl mx-auto mt-2 sm:mt-4 leading-relaxed px-2`}>
+          <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 max-w-2xl mx-auto mt-2 sm:mt-4 leading-relaxed px-2`}>
             Capture the beautiful moments of {groomNickname} & {brideNickname}'s wedding day. Share your favorite memories so our keepsake gallery glows with every smile, embrace, and celebration from this special day.
           </p>
-          <div className="mx-auto mt-3 sm:mt-5 h-px w-20 sm:w-24 bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+          
+          {/* Decorative element below subtitle */}
+          <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
+            <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+            <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A58169] to-[#751A23] rounded-full shadow-[0_0_12px_rgba(165,129,105,0.9)]" />
+            <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+          </div>
         </motion.div>
 
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-10" variants={staggerChildren} initial="initial" animate="animate">
@@ -168,21 +181,21 @@ export function SnapShare() {
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.25 }}
                   >
-                    <Image src="/mobile-background/couple (1).JPG" alt="Wedding moment 1" fill className="object-cover" />
+                    <Image src="/mobile-background/couple (3).webp" alt="Wedding moment 1" fill className="object-cover" />
                   </motion.div>
                   <motion.div
                     className="relative aspect-square rounded-lg sm:rounded-xl overflow-hidden shadow-md border-2 border-white/30 hover:border-white/50 transition-all"
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.25 }}
                   >
-                    <Image src="/mobile-background/couple (20).JPG" alt="Wedding moment 2" fill className="object-cover" />
+                    <Image src="/mobile-background/couple (7).webp" alt="Wedding moment 2" fill className="object-cover" />
                   </motion.div>
                   <motion.div
                     className="relative col-span-2 aspect-[3/2] rounded-lg sm:rounded-xl overflow-hidden shadow-md border-2 border-white/30 hover:border-white/50 transition-all"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.25 }}
                   >
-                    <Image src="/images/1st Part/2.webp" alt="Wedding moment 3" fill className="object-cover" />
+                    <Image src="/desktop-background/couple (2).webp" alt="Wedding moment 3" fill className="object-cover" />
                   </motion.div>
                 </div>
                 <p className={`${cormorant.className} text-white text-xs sm:text-sm text-center mt-3 sm:mt-5 px-1.5 leading-relaxed`}>
@@ -245,7 +258,7 @@ export function SnapShare() {
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ scale: 1.02 }}
                   >
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-2 sm:gap-3">
                       <span className={`${cormorant.className} text-[#751A23] font-bold text-sm sm:text-base md:text-lg break-all flex-1 text-center sm:text-left`}>
                         {hashtag}
                       </span>

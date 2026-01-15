@@ -19,48 +19,68 @@ export function GuestInformation() {
   return (
     <Section
       id="guest-information"
-      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#51080F]"
+      className="relative py-12 md:py-16 lg:py-20 overflow-hidden"
     >
-      {/* Background image - same as gallery */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img
-          src="/Details/newBackground.jpg"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-        {/* Overlay with #751A23 */}
-        <div className="absolute inset-0 bg-[#751A23]/40" />
+      {/* Top-left corner decoration */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/top-left-corner.png"
+            alt=""
+            fill
+            className="object-contain object-top-left"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'top left'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Bottom-right corner decoration */}
+      <div className="absolute bottom-0 right-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/right-bottom-corner.png"
+            alt=""
+            fill
+            className="object-contain object-bottom-right"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'bottom right'
+            }}
+          />
+        </div>
       </div>
 
       {/* Header */}
       <div className="relative z-30 text-center mb-6 sm:mb-9 md:mb-12 px-3 sm:px-4">
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-white mb-2`}
+          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#E1C49C] mb-2`}
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.75)" }}
         >
           Important Guidelines
         </p>
 
         <h2
-          className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-1.5 sm:mb-3 md:mb-4"
+          className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E1C49C] mb-1.5 sm:mb-3 md:mb-4"
           style={{ textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}
         >
           Guest Information
         </h2>
 
-        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/90 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           Everything you need to know to make your experience smooth and enjoyable
         </p>
 
-        {/* Decorative element below subtitle - matching gallery style */}
+        {/* Decorative element below subtitle - matching countdown style */}
         <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#751A23]/60" />
-          <div className="w-1.5 h-1.5 bg-[#A58169]/80 rounded-full" />
-          <div className="w-1.5 h-1.5 bg-[#E1C49C]/80 rounded-full" />
-          <div className="w-1.5 h-1.5 bg-[#751A23]/80 rounded-full" />
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#751A23]/60" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+          <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A58169] to-[#751A23] rounded-full shadow-[0_0_12px_rgba(165,129,105,0.9)]" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
         </div>
       </div>
 
@@ -68,10 +88,10 @@ export function GuestInformation() {
       <div className="relative z-10 mb-4 sm:mb-7 max-w-4xl mx-auto px-3 sm:px-5">
         {/* Important Information Header */}
         <div className="text-center mb-3 sm:mb-5">
-          <h3 className="text-base sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+          <h3 className="text-base sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 text-[#E1C49C] drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
             Important Information
           </h3>
-          <p className="text-[11px] sm:text-xs md:text-sm text-white/90 max-w-xl mx-auto leading-relaxed drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">
+          <p className="text-[11px] sm:text-xs md:text-sm text-[#E1C49C]/95 max-w-xl mx-auto leading-relaxed drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">
             Kindly take note of these details to help the day flow smoothly and beautifully.
           </p>
         </div>

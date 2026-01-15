@@ -1,6 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
 import MasonryGallery from "@/components/masonry-gallery"
+import { siteConfig } from "@/content/site"
 
 // Generate on each request so newly added images in public/ appear without a rebuild
 export const dynamic = "force-dynamic"
@@ -25,8 +26,12 @@ async function getImagesFrom(dir: string) {
 }
 
 export default async function GalleryPage() {
-  const galleryImages = await getImagesFrom("images/Gallery")
-  const images = galleryImages.map((src) => ({ src, category: "gallery" as const }))
+  const mobileImages = await getImagesFrom("mobile-background")
+  const desktopImages = await getImagesFrom("desktop-background")
+  const allImages = [...mobileImages, ...desktopImages]
+  const images = allImages.map((src) => ({ src, category: "gallery" as const }))
+  const { brideNickname, groomNickname } = siteConfig.couple
+  const coupleDisplayName = `${groomNickname} & ${brideNickname}`
 
   return (
     <main className="min-h-screen bg-[#51080F] relative overflow-hidden">
@@ -60,7 +65,7 @@ export default async function GalleryPage() {
             Our Love Story Gallery
           </h1>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#E1C49C]/90 font-light max-w-xl mx-auto leading-relaxed px-2">
-            Every photograph tells a story of Daniel & Florence's journey to forever
+            Every photograph tells a story of {coupleDisplayName}'s journey to forever
           </p>
           
           {/* Decorative element below subtitle */}
@@ -76,7 +81,11 @@ export default async function GalleryPage() {
             <p className="font-light">
               No images found. Add files to{" "}
               <code className="px-2 py-1 bg-[#751A23]/80 rounded border border-[#751A23]/30 text-[#E1C49C]">
-                public/images/Gallery
+                public/mobile-background
+              </code>
+              {" "}or{" "}
+              <code className="px-2 py-1 bg-[#751A23]/80 rounded border border-[#751A23]/30 text-[#E1C49C]">
+                public/desktop-background
               </code>
               .
             </p>

@@ -2,7 +2,13 @@ import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
-const IMAGES_DIR = path.resolve(process.cwd(), "public", "images");
+// Get directories from command line args or use defaults
+const TARGET_DIRS = process.argv.slice(2).length > 0
+  ? process.argv.slice(2).map(dir => path.resolve(process.cwd(), dir))
+  : [
+      path.resolve(process.cwd(), "public", "desktop-background"),
+      path.resolve(process.cwd(), "public", "mobile-background"),
+    ];
 
 const VALID_INPUT_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"]);
 
@@ -50,26 +56,35 @@ function getAllImageFiles(dir: string): string[] {
 }
 
 async function main(): Promise<void> {
-  if (!fs.existsSync(IMAGES_DIR)) {
-    console.error(`Directory not found: ${IMAGES_DIR}`);
-    process.exit(1);
+  // Validate all directories exist
+  for (const dir of TARGET_DIRS) {
+    if (!fs.existsSync(dir)) {
+      console.error(`Directory not found: ${dir}`);
+      process.exit(1);
+    }
   }
 
-  const targets = getAllImageFiles(IMAGES_DIR);
+  // Collect all image files from all target directories
+  const allTargets: string[] = [];
+  for (const dir of TARGET_DIRS) {
+    const targets = getAllImageFiles(dir);
+    allTargets.push(...targets);
+  }
 
-  if (targets.length === 0) {
+  if (allTargets.length === 0) {
     console.log("No JPG/PNG images found to convert.");
     return;
   }
 
-  console.log(`Found ${targets.length} images in ${IMAGES_DIR} and subdirectories`);
+  console.log(`Found ${allTargets.length} images in:`);
+  TARGET_DIRS.forEach(dir => console.log(`  - ${dir}`));
   console.log(`Converting to WebP format...\n`);
 
   let converted = 0;
   let skipped = 0;
   let failed = 0;
 
-  for (const file of targets) {
+  for (const file of allTargets) {
     try {
       const outputPath = path.join(
         path.dirname(file),
@@ -93,7 +108,7 @@ async function main(): Promise<void> {
   console.log(`  Converted: ${converted}`);
   console.log(`  Skipped (already exists): ${skipped}`);
   console.log(`  Failed: ${failed}`);
-  console.log(`  Total: ${targets.length}`);
+  console.log(`  Total: ${allTargets.length}`);
 }
 
 main().catch((err) => {

@@ -41,8 +41,12 @@ export function Details() {
   
   const ceremonyLocation = siteConfig.ceremony.location
   const receptionLocation = siteConfig.reception.location
+  const ceremonyAddress = siteConfig.ceremony.address || ""
+  const receptionAddress = siteConfig.reception.address || ""
   const ceremonyLocationFormatted = formatAddress(ceremonyLocation)
   const receptionLocationFormatted = formatAddress(receptionLocation)
+  const ceremonyFullAddress = ceremonyAddress ? `${ceremonyLocation}, ${ceremonyAddress}` : ceremonyLocation
+  const receptionFullAddress = receptionAddress ? `${receptionLocation}, ${receptionAddress}` : receptionLocation
   
   // Format date with comma: "February 8 2026" -> "February 8, 2026"
   const formattedCeremonyDate = siteConfig.ceremony.date.replace(/(\w+ \d+) (\d+)/, "$1, $2")
@@ -97,8 +101,8 @@ export function Details() {
   }
 
   // Generate Google Maps links
-  const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.ceremony.location)}`
-  const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.reception.location)}`
+  const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(ceremonyFullAddress)}`
+  const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(receptionFullAddress)}`
 
   const openInMaps = (link: string) => {
     window.open(link, "_blank", "noopener,noreferrer")
@@ -141,9 +145,6 @@ export function Details() {
         <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/90 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           All the important details to help you join us in celebrating our special day
         </p>
-        <p className={`${cormorant.className} text-[0.65rem] sm:text-xs md:text-sm text-white/80 font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
-          RSVP Deadline: {siteConfig.details.rsvp.deadline}
-        </p>
 
         {/* Decorative element below subtitle - matching gallery style */}
         <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
@@ -155,13 +156,13 @@ export function Details() {
         </div>
       </div>
 
-      {/* Ceremony & Reception Locations (combined container) */}
+      {/* Ceremony Container */}
       <div className="relative z-10 mb-4 sm:mb-8 max-w-6xl mx-auto px-3 sm:px-5">
         <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-[#751A23]/40 bg-gradient-to-b shadow-[0_20px_60px_rgba(0,0,0,0.45)] transition-transform duration-500 group hover:scale-[1.01]">
-          {/* Combined image */}
-          <div className="relative h-64 sm:h-80 md:h-96 w-full">
+          {/* Ceremony image */}
+          <div className="relative h-48 sm:h-64 md:h-80 w-full">
             <Image
-              src="/Details/CasaAntonia.png"
+              src="/Details/Nagwaling Parish Church.JPG"
               alt={ceremonyLocationFormatted}
               fill
               className="object-cover"
@@ -171,27 +172,26 @@ export function Details() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#751A23]/95 via-[#751A23]/65 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end px-3 sm:px-6 pb-3 sm:pb-6 text-white">
               <p className="style-script-regular text-xl sm:text-2xl md:text-3xl font-normal leading-none drop-shadow-md mb-2">
-                Ceremony & Reception
+                Ceremony
               </p>
             </div>
           </div>
 
-          {/* Details panel - Combined */}
-          <div className="bg-[#E1C49C]/95 text-[#51080F] px-3 sm:px-6 py-4 sm:py-6 space-y-4 backdrop-blur-sm">
+          {/* Ceremony details panel */}
+          <div className="bg-[#E1C49C]/95 text-[#51080F] px-3 sm:px-6 py-4 sm:py-6 backdrop-blur-sm">
             {/* Address */}
-            <div className="text-left pb-3 border-b border-[#751A23]/30">
+            <div className="text-left pb-3 mb-3 border-b border-[#751A23]/30">
               <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase mb-1">
                 Location
               </p>
               <p className="text-sm sm:text-base md:text-lg font-medium text-[#51080F]">
-                {ceremonyLocationFormatted}
+                {formatAddress(ceremonyFullAddress)}
               </p>
             </div>
 
-            {/* Ceremony Details */}
             <div className="space-y-2.5">
-              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase">
-                Ceremony
+              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase mb-3">
+                Ceremony Details
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-left">
                 <div className="rounded-md border border-[#751A23] bg-white/80 px-2.5 py-2 shadow-sm">
@@ -209,10 +209,72 @@ export function Details() {
               </div>
             </div>
 
-            {/* Reception Details */}
-            <div className="space-y-2.5 pt-2 border-t border-[#751A23]/30">
-              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase">
+            {/* Action buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 pt-4">
+              <button
+                onClick={() => openInMaps(ceremonyMapsLink)}
+                className="flex items-center justify-center gap-1.5 rounded-lg bg-[#751A23] text-white py-2.5 sm:py-3 shadow-lg hover:translate-y-[-2px] hover:bg-[#751A23]/90 transition-all text-xs sm:text-sm font-semibold"
+              >
+                <Navigation className="w-4 h-4" />
+                Get Directions
+              </button>
+              <button
+                onClick={() => copyToClipboard(ceremonyFullAddress, "ceremony")}
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-[#751A23]/35 text-[#51080F] py-2.5 sm:py-3 hover:bg-[#751A23]/5 transition-all text-xs sm:text-sm font-semibold"
+              >
+                {copiedItems.has("ceremony") ? (
+                  <>
+                    <Check className="w-4 h-4" />
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4" />
+                    Copy Address
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Reception Container */}
+      <div className="relative z-10 mb-4 sm:mb-8 max-w-6xl mx-auto px-3 sm:px-5">
+        <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-[#751A23]/40 bg-gradient-to-b shadow-[0_20px_60px_rgba(0,0,0,0.45)] transition-transform duration-500 group hover:scale-[1.01]">
+          {/* Reception image */}
+          <div className="relative h-48 sm:h-64 md:h-80 w-full">
+            <Image
+              src="/Details/Pan Resort And Hotel.jpg"
+              alt={receptionLocationFormatted}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#751A23]/95 via-[#751A23]/65 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end px-3 sm:px-6 pb-3 sm:pb-6 text-white">
+              <p className="style-script-regular text-xl sm:text-2xl md:text-3xl font-normal leading-none drop-shadow-md mb-2">
                 Reception
+              </p>
+            </div>
+          </div>
+
+          {/* Reception details panel */}
+          <div className="bg-[#E1C49C]/95 text-[#51080F] px-3 sm:px-6 py-4 sm:py-6 backdrop-blur-sm">
+            {/* Address */}
+            <div className="text-left pb-3 mb-3 border-b border-[#751A23]/30">
+              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase mb-1">
+                Location
+              </p>
+              <p className="text-sm sm:text-base md:text-lg font-medium text-[#51080F]">
+                {formatAddress(receptionFullAddress)}
+              </p>
+            </div>
+
+            <div className="space-y-2.5">
+              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#751A23] uppercase mb-3">
+                Reception Details
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-left">
                 <div className="rounded-md border border-[#751A23] bg-white/80 px-2.5 py-2 shadow-sm">
@@ -231,19 +293,19 @@ export function Details() {
             </div>
 
             {/* Action buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 pt-4">
               <button
-                onClick={() => openInMaps(ceremonyMapsLink)}
+                onClick={() => openInMaps(receptionMapsLink)}
                 className="flex items-center justify-center gap-1.5 rounded-lg bg-[#751A23] text-white py-2.5 sm:py-3 shadow-lg hover:translate-y-[-2px] hover:bg-[#751A23]/90 transition-all text-xs sm:text-sm font-semibold"
               >
                 <Navigation className="w-4 h-4" />
                 Get Directions
               </button>
               <button
-                onClick={() => copyToClipboard(ceremonyLocation, "ceremony-reception")}
+                onClick={() => copyToClipboard(receptionFullAddress, "reception")}
                 className="flex items-center justify-center gap-1.5 rounded-lg border border-[#751A23]/35 text-[#51080F] py-2.5 sm:py-3 hover:bg-[#751A23]/5 transition-all text-xs sm:text-sm font-semibold"
               >
-                {copiedItems.has("ceremony-reception") ? (
+                {copiedItems.has("reception") ? (
                   <>
                     <Check className="w-4 h-4" />
                     Copied
@@ -333,8 +395,8 @@ export function Details() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-0" />
 
               <Image
-                src="/Details/CasaAntonia.png"
-                alt={ceremonyLocationFormatted}
+                src={showImageModal === "ceremony" ? "/Details/Nagwaling Parish Church.JPG" : "/Details/Pan Resort And Hotel.jpg"}
+                alt={showImageModal === "ceremony" ? ceremonyLocationFormatted : receptionLocationFormatted}
                 fill
                 className="object-contain p-6 sm:p-8 md:p-10 transition-transform duration-700 group-hover:scale-105 z-10"
                 sizes="95vw"
@@ -369,8 +431,8 @@ export function Details() {
                       <MapPin className="w-4 h-4" style={{ color: "#51080F" }} />
                       <span>
                         {showImageModal === "ceremony"
-                          ? ceremonyLocationFormatted
-                          : receptionLocationFormatted}
+                          ? formatAddress(ceremonyFullAddress)
+                          : formatAddress(receptionFullAddress)}
                       </span>
                     </div>
 
@@ -415,8 +477,8 @@ export function Details() {
                       onClick={() =>
                         copyToClipboard(
                           showImageModal === "ceremony"
-                            ? ceremonyLocation
-                            : receptionLocation,
+                            ? ceremonyFullAddress
+                            : receptionFullAddress,
                           `modal-${showImageModal}`,
                         )
                       }

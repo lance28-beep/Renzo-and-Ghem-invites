@@ -1,8 +1,6 @@
 "use client"
 
-import { useState } from "react"
 import { Section } from "@/components/section"
-import { siteConfig } from "@/content/site"
 import Stack from "@/components/stack"
 import { motion } from "motion/react"
 import { Cormorant_Garamond } from "next/font/google"
@@ -12,35 +10,35 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 })
 
-const storyTabs = [
-  { id: "groom", label: "Al's Story", subtitle: "His side of forever" },
-  { id: "bride", label: "Jhessa's Story", subtitle: "Her side of forever" },
-] as const
-
-type StoryTabId = (typeof storyTabs)[number]["id"]
+const loveStory = [
+  "On February 5, 2015, destiny quietly began its work. Renzo saw Ghem in a Facebook photo—smiling effortlessly with her high school friends. In that single moment, curiosity turned into courage. He asked one of her friends for help, hoping for a simple introduction that would change everything.",
+  "With a playful nudge from fate, her friend said, \"Accept mo daw si Renzo Liwanag… ayan ha, baka humabol pa kayo sa Valentine's.\"",
+  "And so, Ghem accepted the friend request.",
+  "What began as a simple click—an innocent \"accept\"—became the first chapter of a love story written not just by chance, but by perfect timing. From that small digital moment grew conversations, laughter, friendship, and a love strong enough to lead them here today—standing hand in hand, choosing each other, forever.",
+  "Together, they discovered that love could be a partnership built on dreams. Even as students starting with online selling, they stood side by side—planning, hustling, and believing in their potential. They explored every venture their hearts dared to dream—buy and sell, boutique businesses, cellphone trading, motor parts, and barbecue stalls—proving that shared vision makes no dream too small and no goal too far. In every effort, they invested trust, patience, and love, building not just businesses but a life together rooted in teamwork, resilience, and growing love.",
+  "Like all true love stories, theirs faced trials. In 2021, challenges led to a season of distance, where hearts were tested and paths uncertain. Yet, through patience, commitment, and enduring faith, Renzo and Ghem found their way back to one another. What was once shaken returned stronger, deeper, and more certain than ever before—a testament to love that perseveres.",
+  "In 2023, after years of shared dedication and hard work, they opened their own minimart, turning dreams into reality and demonstrating the power of love, perseverance, and partnership.",
+  "With Ghem devoted to her career and Renzo supporting their growing ventures, they continue to walk side by side.",
+  "Today, they stand hand in hand, not only as partners in life and business but as souls who have chosen each other—today, tomorrow, and always. 💍"
+]
 
 export function Narrative() {
-  const [activeStory, setActiveStory] = useState<StoryTabId>("groom")
-  const storyParagraphs =
-    siteConfig.narratives?.[activeStory]
-      ?.trim()
-      .split(/\n\s*\n/)
-      .filter(Boolean) ?? []
+  const storyParagraphs = loveStory
 
   return (
     <Section
       id="narrative"
-      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-[#D2A4A4] via-[#E0B4B1] to-[#F7E6CA]"
+      className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-[#540000] via-[#740403] to-[#540000]"
     >
-      {/* Background elements with blush & sand motif */}
+      {/* Background elements with maroon motif */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Vertical blush gradients to frame the story */}
-        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#D3B9A2]/90 via-[#D2A4A4]/78 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#D3B9A2]/88 via-[#E0B4B1]/70 to-transparent" />
-        {/* Soft radial light in warm blush */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(250,221,224,0.42),transparent_55%)] opacity-90" />
-        {/* Subtle diagonal wash of sand & rose */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E9D5C3]/30 via-transparent to-[#D2A4A4]/24 mix-blend-soft-light" />
+        {/* Vertical gradients to frame the story */}
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-[#540000]/90 via-[#740403]/78 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#540000]/88 via-[#740403]/70 to-transparent" />
+        {/* Soft radial light */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(116,4,3,0.42),transparent_55%)] opacity-90" />
+        {/* Subtle diagonal wash */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#740403]/30 via-transparent to-[#540000]/24 mix-blend-soft-light" />
       </div>
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,30 +52,33 @@ export function Narrative() {
         >
           <div className="space-y-2 sm:space-y-3">
             <p
-              className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#4A2E2E]`}
-              style={{ textShadow: "0 2px 10px rgba(255,255,255,0.45)" }}
+              className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#E1C49C]`}
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.75)" }}
             >
-              Al &amp; Jhessa&apos;s Love Story
+              Our Journey Together
             </p>
             <h2
-              className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#2F1C1C]"
-              style={{ textShadow: "0 4px 18px rgba(255,255,255,0.6)" }}
+              className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white"
+              style={{ textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}
             >
-              When Two Stories Became One
+              Love Story
             </h2>
+            <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white/95 font-light max-w-xl mx-auto leading-relaxed px-2 mt-2`}>
+              A beautiful tale of two hearts finding each other and building forever together
+            </p>
 
             {/* Decorative flourish */}
-            <div className="flex items-center justify-center gap-3 pt-1">
-              <div className="w-8 md:w-12 h-px bg-gradient-to-r from-transparent via-[#D2A4A4]/80 to-transparent" />
+            <div className="flex items-center justify-center gap-3 pt-1 mt-4">
+              <div className="w-8 md:w-12 h-px bg-gradient-to-r from-transparent via-[#E1C49C]/60 to-transparent" />
               <motion.div
                 animate={{ scale: [1, 1.15, 1], rotate: [0, 8, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#2F1C1C]/80" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#E1C49C]/80" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
               </motion.div>
-              <div className="w-8 md:w-12 h-px bg-gradient-to-l from-transparent via-[#D2A4A4]/80 to-transparent" />
+              <div className="w-8 md:w-12 h-px bg-gradient-to-l from-transparent via-[#E1C49C]/60 to-transparent" />
             </div>
           </div>
         </motion.div>
@@ -107,12 +108,12 @@ export function Narrative() {
                 sendToBackOnClick={false}
                 cardDimensions={{ width: 240, height: 280 }}
                 cardsData={[
-                  { id: 1, img: "/mobile-background/couple (1).jpg" },
-                  { id: 2, img: "/mobile-background/couple (2).jpg" },
-                  { id: 3, img: "/mobile-background/couple (3).jpg" },
-                  { id: 4, img: "/mobile-background/couple (4).jpg" },
-                  { id: 5, img: "/mobile-background/couple (5).jpg" },
-                  { id: 6, img: "/mobile-background/couple (6).jpg" },
+                  { id: 1, img: "/mobile-background/couple (1).webp" },
+                  { id: 2, img: "/mobile-background/couple (2).webp" },
+                  { id: 3, img: "/mobile-background/couple (3).webp" },
+                  { id: 4, img: "/mobile-background/couple (4).webp" },
+                  { id: 5, img: "/mobile-background/couple (5).webp" },
+                  { id: 6, img: "/mobile-background/couple (6).webp" },
 
                 ]}
                 animationConfig={{ stiffness: 260, damping: 20 }}
@@ -142,38 +143,6 @@ export function Narrative() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="flex flex-col items-center text-center gap-3 md:gap-5 mb-8 md:mb-12">
-            <p className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm text-[#4A2E2E] tracking-[0.16em] uppercase`}>
-              Two hearts, one promise
-            </p>
-            {/* Tabs - compact single row with gentle wrapping on very small screens */}
-            <div className="relative inline-flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1.5 sm:gap-x-2 sm:gap-y-1 rounded-full border border-[#D2A4A4]/30 bg-white/40 backdrop-blur-sm px-1.5 py-1.5 max-w-full shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-              {storyTabs.map((tab) => {
-                const isActive = tab.id === activeStory
-                return (
-                  <motion.button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setActiveStory(tab.id)}
-                    className={`relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[0.7rem] sm:text-xs md:text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#D2A4A4] focus-visible:ring-offset-white/40 ${
-                      isActive
-                        ? "bg-[#F7E6CA] text-[#2F1C1C] shadow-xl shadow-[#D2A4A4]/25 border border-[#D2A4A4]/70"
-                        : "text-[#2F1C1C]/80 hover:text-[#2F1C1C] border border-transparent"
-                    }`}
-                    aria-pressed={isActive}
-                    aria-controls="story-panel"
-                    whileTap={{ scale: 0.96 }}
-                  >
-                    <span className="block leading-snug">{tab.label}</span>
-                    <span className="text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.16em] font-normal text-[#4A2E2E]/80">
-                      {tab.subtitle}
-                    </span>
-                  </motion.button>
-                )
-              })}
-            </div>
-          </div>
-
           <div id="story-panel" className="space-y-4 md:space-y-6" aria-live="polite">
             {storyParagraphs.map((paragraph, index) => (
               <motion.div 
@@ -186,14 +155,14 @@ export function Narrative() {
               >
                 {/* First paragraph with drop cap */}
                 {index === 0 ? (
-                  <p className="text-sm md:text-base leading-relaxed text-[#2F1C1C] text-pretty font-sans font-light pl-3 md:pl-6">
-                    <span className="float-left text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-[#2F1C1C] leading-none mr-2 mt-1 drop-shadow-[0_4px_16px_rgba(210,164,164,0.45)]">
+                  <p className="text-sm md:text-base leading-relaxed text-white/95 text-pretty font-sans font-light pl-3 md:pl-6">
+                    <span className="float-left text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-none mr-2 mt-1 drop-shadow-[0_4px_16px_rgba(0,0,0,0.75)]">
                       {paragraph.charAt(0)}
                     </span>
                     {paragraph.slice(1)}
                   </p>
                 ) : (
-                  <p className="text-sm md:text-base leading-relaxed text-[#2F1C1C] text-pretty font-sans font-light pl-3 md:pl-6">
+                  <p className="text-sm md:text-base leading-relaxed text-white/95 text-pretty font-sans font-light pl-3 md:pl-6">
                     {paragraph}
                   </p>
                 )}
@@ -209,9 +178,9 @@ export function Narrative() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {/* Decorative divider with sage & gold motif */}
+            {/* Decorative divider */}
             <div className="flex items-center justify-center gap-4">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#D2A4A4]/70 to-[#E9D5C3]/65" />
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E1C49C]/60 to-transparent" />
               <motion.div
                 animate={{
                   rotate: [0, 360],
@@ -222,21 +191,21 @@ export function Narrative() {
                   ease: "linear",
                 }}
               >
-                <svg className="w-5 h-5 text-[#D2A4A4]/85" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#E1C49C]/80" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
                 </svg>
               </motion.div>
-              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#D2A4A4]/70 to-[#E9D5C3]/65" />
+              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#E1C49C]/60 to-transparent" />
             </div>
 
             {/* Enhanced CTA Button with sage motif */}
             <div className="flex justify-center">
               <motion.a
                 href="#guest-list"
-                className="group relative w-full sm:w-auto px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-[#2F1C1C] font-sans font-bold text-sm sm:text-base md:text-lg rounded-[2rem] transition-all duration-500 text-center overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#E9D5C3] hover:border-[#D2A4A4]"
+                className="group relative w-full sm:w-auto px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-[#51080F] font-sans font-bold text-sm sm:text-base md:text-lg rounded-[2rem] transition-all duration-500 text-center overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#E1C49C] hover:border-[#E1C49C]/80"
                 style={{ 
-                  backgroundImage: "linear-gradient(135deg, #FADDE0, #E0B4B1)",
-                  boxShadow: "0 10px 40px rgba(0,0,0,0.35), 0 4px 12px rgba(210,164,164,0.45)"
+                  backgroundImage: "linear-gradient(135deg, #E1C49C, #F5DEB4)",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.5), 0 4px 12px rgba(225,196,156,0.4)"
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -244,17 +213,17 @@ export function Narrative() {
                 whileHover={{ scale: 1.05, y: -4 }}
                 whileTap={{ scale: 0.98 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundImage = "linear-gradient(135deg, #E0B4B1, #D2A4A4)";
-                  e.currentTarget.style.boxShadow = "0 16px 55px rgba(0,0,0,0.45), 0 6px 18px rgba(208,152,152,0.6)";
+                  e.currentTarget.style.backgroundImage = "linear-gradient(135deg, #F5DEB4, #E1C49C)";
+                  e.currentTarget.style.boxShadow = "0 16px 55px rgba(0,0,0,0.6), 0 6px 18px rgba(225,196,156,0.5)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundImage = "linear-gradient(135deg, #FADDE0, #E0B4B1)";
-                  e.currentTarget.style.boxShadow = "0 10px 40px rgba(0,0,0,0.35), 0 4px 12px rgba(210,164,164,0.45)";
+                  e.currentTarget.style.backgroundImage = "linear-gradient(135deg, #E1C49C, #F5DEB4)";
+                  e.currentTarget.style.boxShadow = "0 10px 40px rgba(0,0,0,0.5), 0 4px 12px rgba(225,196,156,0.4)";
                 }}
               >
-                {/* Pulsing glow effect with gold accent */}
+                {/* Pulsing glow effect */}
                 <motion.div 
-                  className="absolute inset-0 bg-[#E9D5C3]/40 rounded-[2rem] blur-2xl"
+                  className="absolute inset-0 bg-[#E1C49C]/40 rounded-[2rem] blur-2xl"
                   animate={{
                     opacity: [0.4, 0.7, 0.4],
                     scale: [1, 1.1, 1],
@@ -265,9 +234,9 @@ export function Narrative() {
                     ease: "easeInOut",
                   }}
                 />
-                {/* Secondary glow with soft neutral accent */}
+                {/* Secondary glow */}
                 <motion.div 
-                  className="absolute inset-0 bg-[#F7E6CA]/26 rounded-[2rem] blur-xl"
+                  className="absolute inset-0 bg-[#F5DEB4]/30 rounded-[2rem] blur-xl"
                   animate={{
                     opacity: [0.2, 0.4, 0.2],
                     scale: [1, 1.15, 1],
@@ -346,10 +315,10 @@ export function Narrative() {
                 </motion.div>
                 
                 {/* Button content */}
-                <span className="relative z-10 tracking-wide uppercase inline-flex items-center gap-3 font-bold text-[#2F1C1C]">
+                <span className="relative z-10 tracking-wide uppercase inline-flex items-center gap-3 font-bold text-[#51080F]">
                   Join Our Celebration
                   <motion.svg 
-                    className="w-5 h-5 md:w-6 md:h-6 text-[#2F1C1C]" 
+                    className="w-5 h-5 md:w-6 md:h-6 text-[#51080F]" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"

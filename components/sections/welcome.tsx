@@ -3,6 +3,7 @@
 import { Section } from "@/components/section"
 import { siteConfig } from "@/content/site"
 import { Cormorant_Garamond } from "next/font/google"
+import Image from "next/image"
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,6 +18,40 @@ export function Welcome() {
       id="welcome"
       className="relative overflow-hidden bg-transparent py-12 sm:py-16 md:py-20"
     >
+      {/* Top-left corner decoration */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/top-left-corner.png"
+            alt=""
+            fill
+            className="object-contain object-top-left"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'top left'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Bottom-right corner decoration */}
+      <div className="absolute bottom-0 right-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/right-bottom-corner.png"
+            alt=""
+            fill
+            className="object-contain object-bottom-right"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'bottom right'
+            }}
+          />
+        </div>
+      </div>
+
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="relative overflow-hidden rounded-3xl sm:rounded-[2rem] border border-[#E1C49C]/70 bg-[#E1C49C]/95 backdrop-blur-2xl shadow-[0_16px_60px_rgba(229,196,156,0.35)] px-5 sm:px-8 md:px-10 py-8 sm:py-10 md:py-12">
           {/* Layered glass + light accents for readability */}

@@ -1,9 +1,11 @@
 export const siteConfig = {
   couple: {
-    bride: "FLORENCE MAE P CLAVERIA",
-    brideNickname: "Florence Mae",
-    groom: "DANIEL B. GARCIA",
-    groomNickname: "Daniel",
+    bride: "Ghemarie Barata",
+    brideNickname: "Ghemarie",
+    brideName: "Ghemarie Barata",
+    groom: "Noriel Renzo Liwanag",
+    groomNickname: "Noriel",
+    groomName: "Noriel Renzo Liwanag",
   },
   wedding: {
     date: "FEB 8, 2026",
@@ -19,17 +21,19 @@ export const siteConfig = {
     },
   },
   ceremony: {
-    location: "CASA ANTONIA, MANGALDAN, PANGASINAN",
-    venue: "CASA ANTONIA, MANGALDAN, PANGASINAN",
+    location: "Nagwaling Parish Church",
+    venue: "Nagwaling Parish Church",
+    address: "",
     date: "February 8 2026",
     day: "Sunday",
     time: "5:00PM",
     entourageTime: "3:30 PM",
-    guestsTime: "4:30 PM",
+    guestsTime: "4:00 PM",
   },
   reception: {
-    location: "CASA ANTONIA, MANGALDAN, PANGASINAN",
-    venue: "CASA ANTONIA, MANGALDAN, PANGASINAN",
+    location: "Pan Resort and Hotel",
+    venue: "Pan Resort and Hotel",
+    address: "",
     date: "FEB 8, 2026",
     time: "Reception to follow",
   },
@@ -63,8 +67,8 @@ Now, as they prepare to say yes before God and the people they love most, Cather
     secondary: "#B9AACB",
   },
   snapShare: {
-    googleDriveLink: "https://drive.google.com/drive/folders/1mcPDa_sGpHnDBWR5mUDek-RFyawjWQqI?usp=sharing",
-    hashtag: "#DanielAndFlorenceMae2026",
+    googleDriveLink: "https://drive.google.com/drive/folders/1F1dyUFQMuq3RzrebM2ylejTW5YqCyanm?usp=sharing",
+    hashtag: "#NorielAndGhemarie2026",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

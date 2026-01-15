@@ -48,13 +48,47 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         }}
       />
 
+      {/* Top-left corner decoration */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/top-left-corner.png"
+            alt=""
+            fill
+            className="object-contain object-top-left"
+            priority
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'top left'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Bottom-right corner decoration */}
+      <div className="absolute bottom-0 right-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/right-bottom-corner.png"
+            alt=""
+            fill
+            className="object-contain object-bottom-right"
+            priority
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'bottom right'
+            }}
+          />
+        </div>
+      </div>
+
       <div className="relative flex flex-col items-center justify-center px-4 sm:px-8">
         {/* Monogram Logo */}
         <div className="relative flex items-center justify-center mb-8 sm:mb-12">
           <div className="relative w-28 sm:w-40 h-28 sm:h-40">
             <Image
               src="/monogram/monogram.png"
-              alt="Daniel & Florence Monogram"
+              alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} Monogram`}
               fill
               className="object-contain"
               priority
@@ -87,6 +121,16 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             style={{ fontFamily: '"Cinzel", serif', fontWeight: 400, color: '#E1C49C' }}
           >
             {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+          </p>
+
+          {/* Couple paragraph */}
+          <p
+            className="text-[10px] sm:text-xs leading-relaxed sm:leading-loose tracking-wide mb-4 sm:mb-6 px-2 sm:px-4"
+            style={{ fontFamily: '"Cinzel", serif', fontWeight: 300, color: 'rgba(225, 196, 156, 0.9)' }}
+          >
+            Two hearts, one journey. As {siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname} prepare to unite their lives in love, 
+            we invite you to witness the beginning of their forever. Join us in celebrating this beautiful moment 
+            as they say "I do" and embark on a lifetime of shared dreams, laughter, and endless love.
           </p>
 
           {/* Progress bar */}

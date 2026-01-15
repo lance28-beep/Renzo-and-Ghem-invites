@@ -105,29 +105,70 @@ export function WeddingTimeline() {
       id="wedding-timeline"
       className="relative py-8 sm:py-10 md:py-14 lg:py-18 overflow-hidden"
     >
-      {/* Header - matching details section style, sage motif */}
+      {/* Top-left corner decoration */}
+      <div className="absolute top-0 left-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/top-left-corner.png"
+            alt=""
+            fill
+            className="object-contain object-top-left"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'top left'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Bottom-right corner decoration */}
+      <div className="absolute bottom-0 right-0 z-10 pointer-events-none m-0 p-0">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] m-0 p-0">
+          <Image
+            src="/decoration/right-bottom-corner.png"
+            alt=""
+            fill
+            className="object-contain object-bottom-right"
+            priority={false}
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)',
+              objectPosition: 'bottom right'
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Header - matching countdown section style */}
       <div className="relative z-10 text-center mb-6 sm:mb-9 md:mb-12 px-3 sm:px-4">
+        {/* Decorative element above title */}
+        <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+          <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A58169] to-[#751A23] rounded-full shadow-[0_0_12px_rgba(165,129,105,0.9)]" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+        </div>
+
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm tracking-[0.3em] uppercase text-white mb-2`}
+          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm tracking-[0.28em] uppercase text-[#E1C49C] mb-2`}
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.75)" }}
         >
           Day Schedule
         </p>
 
-        <h2 className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-1.5 sm:mb-3 md:mb-4 drop-shadow-[0_6px_24px_rgba(0,0,0,0.7)]">
+        <h2 className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#E1C49C] mb-1.5 sm:mb-3 md:mb-4 drop-shadow-lg">
           Wedding Timeline
         </h2>
 
-        <p className="text-[11px] sm:text-sm md:text-base lg:text-lg text-white/95 max-w-xl mx-auto leading-relaxed px-2">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#E1C49C]/95 max-w-xl mx-auto leading-relaxed px-2">
           A simple overview of the key moments of our day, from arrival to farewell.
         </p>
 
-        {/* Simple divider */}
+        {/* Decorative element below subtitle */}
         <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-[#751A23] to-transparent" />
-          <div className="w-1.5 h-1.5 bg-[#751A23] rounded-full shadow-[0_0_12px_rgba(117,26,35,0.9)]" />
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-l from-transparent via-[#751A23] to-transparent" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
+          <div className="w-1.5 h-1.5 bg-gradient-to-br from-[#A58169] to-[#751A23] rounded-full shadow-[0_0_12px_rgba(165,129,105,0.9)]" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-[#E1C49C]/25" />
         </div>
       </div>
 
@@ -264,7 +305,10 @@ function IconBadge({
         height={200}
         className={`${
           mobile ? "w-20 h-20" : "w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
-        } object-contain brightness-0 invert`}
+        } object-contain`}
+        style={{
+          filter: 'brightness(0) saturate(100%) invert(84%) sepia(28%) saturate(557%) hue-rotate(342deg) brightness(100%) contrast(88%)'
+        }}
       />
     )
   }

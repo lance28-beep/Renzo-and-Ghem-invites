@@ -19,15 +19,15 @@ const windSong = WindSong({
   weight: "400",
 })
 
-const galleryHashtag = "#DanielAndFlorenceWedding"
+const galleryHashtag = "#NorielAndGhemarieWedding"
 
 const galleryItems = [
-  { image: "/images/3rd Part/1.webp", text: " " },
-  { image: "/images/3rd Part/2.webp", text: " " },
-  { image: "/images/3rd Part/3.webp", text: " " },
-  { image: "/images/3rd Part/4.webp", text: " " },
-  { image: "/images/3rd Part/5.webp", text: " " },
-  { image: "/images/3rd Part/6.webp", text: " " },
+  { image: "/mobile-background/couple (10).webp", text: " " },
+  { image: "/mobile-background/couple (9).webp", text: " " },
+  { image: "/mobile-background/couple (8).webp", text: " " },
+  { image: "/mobile-background/couple (7).webp", text: " " },
+  { image: "/mobile-background/couple (6).webp", text: " " },
+  { image: "/mobile-background/couple (5).webp", text: " " },
 
 ]
 
@@ -145,7 +145,7 @@ export function Gallery() {
         </div>
 
         <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 font-light max-w-xl mx-auto leading-relaxed mt-3`}>
-          Beautiful frames capturing the journey of Daniel & Florence — each photograph a precious memory of laughter, love, and the moments that led us to forever.
+          Beautiful frames capturing the journey of {coupleDisplayName} — each photograph a precious memory of laughter, love, and the moments that led us to forever.
         </p>
 
         <div className="flex items-center justify-center gap-2 mt-6">
