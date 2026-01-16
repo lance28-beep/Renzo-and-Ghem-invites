@@ -31,7 +31,7 @@ export default async function GalleryPage() {
   const allImages = [...mobileImages, ...desktopImages]
   const images = allImages.map((src) => ({ src, category: "gallery" as const }))
   const { brideNickname, groomNickname } = siteConfig.couple
-  const coupleDisplayName = `${groomNickname} & ${brideNickname}`
+  const coupleDisplayName = `${groomNickname} and ${brideNickname}`
 
   return (
     <main className="min-h-screen bg-[#51080F] relative overflow-hidden">

@@ -22,14 +22,14 @@ export function SnapShare() {
 
   const websiteUrl = typeof window !== "undefined" ? window.location.href : "https://example.com"
   const driveLink = siteConfig.snapShare?.googleDriveLink || ""
-  const hashtags = ["#NorielAndGhemarie2026", "#NorielRenzoGhemarie", "#NorielGhemarieForever"]
+  const hashtags = ["#RenzoFoundHisGhem"]
   const allHashtagsText = hashtags.join(" ")
   const groomNickname = siteConfig.couple.groomNickname
   const brideNickname = siteConfig.couple.brideNickname
   const sanitizedGroomName = groomNickname.replace(/\s+/g, "")
   const sanitizedBrideName = brideNickname.replace(/\s+/g, "")
 
-  const shareText = `Celebrate ${groomNickname} & ${brideNickname}'s wedding! Explore the details and share your special memories: ${websiteUrl} ${allHashtagsText} ✨`
+  const shareText = `Celebrate ${groomNickname} and ${brideNickname}'s wedding! Explore the details and share your special memories: ${websiteUrl} ${allHashtagsText} ✨`
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640)
@@ -152,7 +152,7 @@ export function SnapShare() {
             Capture & Share the Celebration
           </h2>
           <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1C49C]/95 max-w-2xl mx-auto mt-2 sm:mt-4 leading-relaxed px-2`}>
-            Capture the beautiful moments of {groomNickname} & {brideNickname}'s wedding day. Share your favorite memories so our keepsake gallery glows with every smile, embrace, and celebration from this special day.
+            Capture the beautiful moments of {groomNickname} and {brideNickname}'s wedding day. Share your favorite memories so our keepsake gallery glows with every smile, embrace, and celebration from this special day.
           </p>
           
           {/* Decorative element below subtitle */}
@@ -212,7 +212,7 @@ export function SnapShare() {
                   Share Our Wedding Website
                 </h4>
                 <p className={`${cormorant.className} text-white text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed px-1`}>
-                  Spread the word about {groomNickname} & {brideNickname}'s wedding celebration. Share this QR code with friends and family so they can join the celebration.
+                  Spread the word about {groomNickname} and {brideNickname}'s wedding celebration. Share this QR code with friends and family so they can join the celebration.
                 </p>
                 <div className="mx-auto inline-flex flex-col items-center bg-white/90 backdrop-blur-sm p-2.5 sm:p-5 md:p-7 rounded-xl sm:rounded-2xl shadow-md border border-[#327B72]/40 mb-3 sm:mb-4 flex-1 justify-center">
                   <div className="mb-2 sm:mb-3 p-1.5 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-[#327B72]/30">
@@ -310,7 +310,7 @@ export function SnapShare() {
                 Share on Social Media
               </h5>
               <p className={`${cormorant.className} text-white text-xs sm:text-sm text-center mb-3 sm:mb-4 leading-relaxed`}>
-                Help spread the word about {groomNickname} & {brideNickname}'s wedding celebration. Share the event across your favorite platforms.
+                Help spread the word about {groomNickname} and {brideNickname}'s wedding celebration. Share the event across your favorite platforms.
               </p>
               <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                 <button
@@ -407,7 +407,7 @@ export function SnapShare() {
         <motion.div className="text-center mt-5 sm:mt-10" variants={fadeInUp}>
           <div className="bg-white/10 rounded-xl sm:rounded-[22px] p-4 sm:p-6 md:p-7 shadow-[0_25px_80px_rgba(0,0,0,0.35)] border border-white/20 max-w-3xl mx-auto backdrop-blur-xl">
             <p className={`${cormorant.className} text-white text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4 px-2`}>
-              Thank you for helping make {groomNickname} & {brideNickname}'s wedding celebration memorable. Your photos and messages create beautiful memories
+              Thank you for helping make {groomNickname} and {brideNickname}'s wedding celebration memorable. Your photos and messages create beautiful memories
               that will last a lifetime—keep sharing the joy throughout the evening.
             </p>
             <div className={`${cormorant.className} flex items-center justify-center gap-2 text-white text-xs sm:text-sm tracking-[0.25em] sm:tracking-[0.32em] uppercase`}>

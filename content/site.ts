@@ -1,15 +1,15 @@
 export const siteConfig = {
   couple: {
     bride: "Ghemarie Barata",
-    brideNickname: "Ghemarie",
+    brideNickname: "Ghem",
     brideName: "Ghemarie Barata",
     groom: "Noriel Renzo Liwanag",
-    groomNickname: "Noriel",
+    groomNickname: "Renzo",
     groomName: "Noriel Renzo Liwanag",
   },
   wedding: {
     date: "FEB 8, 2026",
-    time: "5PM",
+    time: "3:00 PM",
     venue: "CASA ANTONIA, MANGALDAN, PANGASINAN",
     tagline: "are getting married!",
     theme: "Purple & Sage Motif",
@@ -21,14 +21,14 @@ export const siteConfig = {
     },
   },
   ceremony: {
-    location: "Nagwaling Parish Church",
-    venue: "Nagwaling Parish Church",
+    location: "San Isidro Parish Church",
+    venue: "San Isidro Parish Church",
     address: "",
     date: "February 8 2026",
     day: "Sunday",
-    time: "5:00PM",
-    entourageTime: "3:30 PM",
-    guestsTime: "4:00 PM",
+    time: "3:00 PM",
+    entourageTime: "2:00 PM",
+    guestsTime: "2:30 PM",
   },
   reception: {
     location: "Pan Resort and Hotel",
@@ -50,25 +50,35 @@ export const siteConfig = {
     },
     note: "We kindly request our guests to dress in formal attire with a color of our motif."
   },
-  narratives: {
-    groom: `The first time Mark saw Catherine, time seemed to slow down. It was an ordinary day that instantly became unforgettable: one smile, one hello, and suddenly his world had a new center. He didn't have the perfect words ready, but he knew he had met someone who felt like home.
-
-Early conversations turned into late-night talks, sharing dreams, favorite meals, and whispered prayers for a future together. With every small adventure—coffee runs, long drives, quiet walks—Mark found himself choosing her over and over again. He loved how she laughed freely, how she listened with her whole heart, and how her faith steadied him.
-
-There were seasons of distance and long workdays, but every reunion reminded him why he stayed patient: because Catherine was worth every mile and every minute apart. When he finally knelt to ask for her hand, it wasn't a question of "if," only "when can we start forever?"`,
-    bride: `Catherine remembers the first time Mark said her name. It was gentle but sure, a kindness that made her feel both seen and safe. In that softness, she found a partner who met her with the same grace she prayed to give.
-
-Mark's steadiness won her heart: the way he showed up, even when schedules were tight, and how he always found lightness in the small things. He celebrated her wins, held space for her worries, and never hesitated to choose "us" in every decision.
-
-Now, as they prepare to say yes before God and the people they love most, Catherine is grateful for the patience, humor, and hope Mark brings to every day. She knows this next chapter is just the start of the love story they get to write together.`,
-  },
+  narrative: `Every great love story begins with a spark — ours just happened to turn into something extraordinary.
+  Sometimes, love arrives when you least expect it, and for us, it began entirely by chance. Our paths crossed in the most ordinary moment, yet neither of us knew that encounter would change our lives forever.
+  
+  They say love always comes when you least expect it — and that’s exactly how our story began.
+  We’d known each other for a long time, but if you ask me how it truly started… well, I didn’t like him at first. To me, he was just a “Kuya,” and honestly, I thought he was a playboy, so I never paid much attention to him.
+  
+  But time has a funny way of changing things.
+  Little by little, Kuya became a friend. And that friend became someone I looked forward to talking to. Then, the man I once couldn’t stand somehow became the man I can’t imagine life without.
+  
+  Of course, we can’t forget his nephew, Ian — the ultimate matchmaker. He would always tease his uncle about me, and it didn’t help that the “marites” kept insisting we were already a couple. We weren’t… but maybe all that teasing and linking pushed us closer together.
+  So, For the marites: THANK YOU 
+  
+  We also experienced a long-distance relationship. I went to Dubai to fulfill my dreams while he stayed in the Philippines, patiently waiting for me. But I couldn’t stay miles away from him — that’s why I came back home, to be with him.
+  
+  As our connection grew, he became my support system, my partner, my safe place. He was thoughtful, genuine, and full of love. Together, we built a relationship that is simple, strong, and real — a love that feels perfect in all its imperfections.
+  
+  Then came August 30, 2024 — my birthday. What I thought was just a simple celebration turned into the most unforgettable moment of my life: the day he knelt down and asked me the question I didn’t even have to think twice about. I said “yes,” of course.
+  
+  On August 31, 2025, we had our pamamanhikan — another step closer to forever.
+  
+  And now, here we are, ready to continue this love story that started with annoyance, grew through friendship, survived distance and teasing, and ended with a “yes.”
+  We stand here, surrounded by the people we love most — ready for a lifetime of growing, learning, and choosing each other every single day.`,
   colors: {
     primary: "#6A4F82",
     secondary: "#B9AACB",
   },
   snapShare: {
     googleDriveLink: "https://drive.google.com/drive/folders/1F1dyUFQMuq3RzrebM2ylejTW5YqCyanm?usp=sharing",
-    hashtag: "#NorielAndGhemarie2026",
+    hashtag: "#RenzoFoundHisGhem",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

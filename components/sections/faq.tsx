@@ -25,7 +25,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Where will the ceremony and reception take place?",
     answer:
-      `The ceremony will be held at ${siteConfig.ceremony.location}. The reception will follow at ${siteConfig.reception.location}. You can find detailed directions, addresses, and maps in the Details section above.`,
+      `The ceremony will be held at ${siteConfig.ceremony.location}. The reception will follow at ${siteConfig.reception.location}. After Party: 9:00 PM at Summerfield Villa (Villa Denise). You can find detailed directions, addresses, and maps in the Details section above.`,
   },
   {
     question: "What time should I arrive?",

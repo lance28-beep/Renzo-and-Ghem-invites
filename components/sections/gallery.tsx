@@ -19,7 +19,7 @@ const windSong = WindSong({
   weight: "400",
 })
 
-const galleryHashtag = "#NorielAndGhemarieWedding"
+const galleryHashtag = "#RenzoAndGhemWedding"
 
 const galleryItems = [
   { image: "/mobile-background/couple (10).webp", text: " " },
@@ -33,7 +33,7 @@ const galleryItems = [
 
 export function Gallery() {
   const { brideNickname, groomNickname } = siteConfig.couple
-  const coupleDisplayName = `${groomNickname} & ${brideNickname}`
+  const coupleDisplayName = `${groomNickname} and ${brideNickname}`
   const [selectedImage, setSelectedImage] = useState<(typeof galleryItems)[0] | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(true)

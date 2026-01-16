@@ -107,7 +107,7 @@ export function Countdown() {
   
   // Parse time: "3:00 PM" -> 15:00
   const timeMatch = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i)
-  let hour = 15 // default 3 PM
+  let hour = 15 // default 3:00 PM
   let minutes = 0
   
   if (timeMatch) {
@@ -130,7 +130,7 @@ export function Countdown() {
   ))
   
   const targetTimestamp = Number.isNaN(parsedTargetDate.getTime())
-    ? new Date(Date.UTC(2026, 1, 8, 9, 0, 0)).getTime() // Fallback: February 8, 2026, 5:00 PM GMT+8 = 9:00 AM UTC
+    ? new Date(Date.UTC(2026, 1, 8, 7, 0, 0)).getTime() // Fallback: February 8, 2026, 3:00 PM GMT+8 = 7:00 AM UTC
     : parsedTargetDate.getTime()
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -217,8 +217,8 @@ export function Countdown() {
         >
           <div className="relative w-72 h-72 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[36rem] xl:w-[40rem] xl:h-[40rem] opacity-90">
             <Image
-              src="/monogram/monogram.png"
-              alt={`${groomNickname} & ${brideNickname} Monogram`}
+              src="/monogram/monogramnew.png"
+              alt={`${groomNickname} and ${brideNickname} Monogram`}
               fill
               className="object-contain"
               style={{

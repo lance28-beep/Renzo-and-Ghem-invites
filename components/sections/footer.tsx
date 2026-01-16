@@ -147,8 +147,8 @@ export function Footer() {
         >
           <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 opacity-95">
             <Image
-              src="/monogram/monogram.png"
-              alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} Monogram`}
+              src="/monogram/monogramnew.png"
+              alt={`${siteConfig.couple.groomNickname} and ${siteConfig.couple.brideNickname} Monogram`}
               fill
               className="object-contain"
               priority={false}
@@ -167,7 +167,7 @@ export function Footer() {
           <p
             className={`${cormorant.className} tracking-[0.25em] sm:tracking-[0.3em] text-xs sm:text-sm md:text-base text-[#E1C49C]/95 uppercase`}
           >
-            {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+            {siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname}
           </p>
           <p
             className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#E1C49C]/95 mt-1 sm:mt-2`}
@@ -186,7 +186,7 @@ export function Footer() {
                 <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#E1C49C]/15 rounded-full flex items-center justify-center border border-[#E1C49C]/30 flex-shrink-0">
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 text-[#E1C49C]" fill="#E1C49C" />
                 </div>
-                <h3 className="style-script-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#E1C49C]">{siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}</h3>
+                <h3 className="style-script-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#E1C49C]">{siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname}</h3>
               </div>
               <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
                 <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#E1C49C]/95`}>
@@ -322,7 +322,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 md:gap-5">
             <div className="text-center md:text-left">
               <p className={`text-[#E1C49C] ${cormorant.className} text-xs sm:text-sm leading-relaxed`}>
-                © {year} {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname} — crafted with love, prayers, and gratitude.
+                © {year} {siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname} — crafted with love, prayers, and gratitude.
               </p>
               <p className={`text-[#E1C49C]/85 ${cormorant.className} text-xs sm:text-sm mt-1 leading-relaxed`}>
                 This celebration site was designed to share our story and joy with you.

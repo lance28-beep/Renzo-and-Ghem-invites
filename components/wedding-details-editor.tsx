@@ -738,7 +738,7 @@ export function WeddingDetailsEditor() {
                   <Input
                     value={weddingDetails.reception.time}
                     onChange={(e) => updateField("reception.time", e.target.value)}
-                    placeholder="5:00 PM"
+                    placeholder="3:00 PM"
                     className="border-[#E5E7EB] focus:ring-[#A67C52]"
                   />
                 </div>

@@ -460,7 +460,7 @@ export default function DashboardPage() {
             <div>
               <h2 className="text-sm text-[#6B7280] font-medium">Welcome back,</h2>
               <h1 className="text-xl font-bold text-[#111827]">
-                {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+                {siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname}
               </h1>
             </div>
             <div className="flex items-center gap-3">

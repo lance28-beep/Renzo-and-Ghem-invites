@@ -87,8 +87,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className="relative flex items-center justify-center mb-8 sm:mb-12">
           <div className="relative w-28 sm:w-40 h-28 sm:h-40">
             <Image
-              src="/monogram/monogram.png"
-              alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} Monogram`}
+              src="/monogram/monogramnew.png"
+              alt={`${siteConfig.couple.groomNickname} and ${siteConfig.couple.brideNickname} Monogram`}
               fill
               className="object-contain"
               priority
@@ -120,7 +120,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             className="text-base sm:text-xl tracking-[0.12em] sm:tracking-[0.15em] mb-4 sm:mb-6"
             style={{ fontFamily: '"Cinzel", serif', fontWeight: 400, color: '#E1C49C' }}
           >
-            {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+            {siteConfig.couple.groomNickname} and {siteConfig.couple.brideNickname}
           </p>
 
           {/* Couple paragraph */}
