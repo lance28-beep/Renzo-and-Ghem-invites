@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useMotionValue, useTransform } from "motion/react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 interface CardData {
   id: number
@@ -75,6 +75,22 @@ export default function Stack({
         ],
   )
 
+  // Generate random rotations once on mount to avoid hydration mismatch
+  const [randomRotations, setRandomRotations] = useState<{ [key: number]: number }>({})
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    // Generate random rotations only on client side after mount
+    if (randomRotation) {
+      const rotations: { [key: number]: number } = {}
+      cards.forEach((card) => {
+        rotations[card.id] = Math.random() * 10 - 5
+      })
+      setRandomRotations(rotations)
+    }
+    setIsMounted(true)
+  }, [randomRotation, cards])
+
   const sendToBack = (id: number) => {
     setCards((prev) => {
       const newCards = [...prev]
@@ -95,7 +111,8 @@ export default function Stack({
       }}
     >
       {cards.map((card, index) => {
-        const randomRotate = randomRotation ? Math.random() * 10 - 5 : 0
+        // Use pre-generated random rotation from state, or 0 if not mounted yet
+        const randomRotate = isMounted && randomRotation ? (randomRotations[card.id] || 0) : 0
 
         return (
           <CardRotate key={card.id} onSendToBack={() => sendToBack(card.id)} sensitivity={sensitivity}>
