@@ -16,9 +16,9 @@ const desktopImages: string[] = [
 const mobileImages: string[] = [
   '/mobile-background/couple (6).webp',
   '/mobile-background/couple (7).webp',
-  '/mobile-background/couple (8).webp',
-  '/mobile-background/couple (9).webp',
-  '/mobile-background/couple (10).webp',
+  '/front/couple (1).png',
+  '/front/couple (2).png',
+  '/front/couple (3).png',
 ];
 
 const SHOW_BUTTERFLIES = false

@@ -6,7 +6,6 @@ import { AudioProvider } from "@/contexts/audio-context"
 import { Hero as MainHero } from "@/components/sections/hero"
 import { Welcome } from "@/components/sections/welcome"
 import { Countdown } from "@/components/sections/countdown"
-import { WeddingTimeline } from "@/components/sections/wedding-timeline"
 import { Gallery } from "@/components/sections/gallery"
 import { Messages } from "@/components/sections/messages"
 import { Details } from "@/components/sections/details"
@@ -14,7 +13,6 @@ import { Entourage } from "@/components/sections/entourage"
 import { PrincipalSponsors } from "@/components/sections/principal-sponsors"
 import { BookOfGuests } from "@/components/sections/book-of-guests"
 import { Registry } from "@/components/sections/registry"
-import { FAQ } from "@/components/sections/faq"
 import { GuestInformation } from "@/components/sections/guest-information"
 import { Footer } from "@/components/sections/footer"
 import { Hero as InvitationHero } from "@/components/loader/Hero"
@@ -87,8 +85,6 @@ export default function Home() {
                 {/* <PrincipalSponsors /> */}
                 <GuestList />
                 <BookOfGuests />
-                <WeddingTimeline />
-                <FAQ />
                 <Registry />
                 <SnapShare />
                 <Footer />

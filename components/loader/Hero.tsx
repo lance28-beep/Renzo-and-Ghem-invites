@@ -16,9 +16,9 @@ const desktopImages: string[] = [
 ];
 
 const mobileImages: string[] = [
-  '/mobile-background/couple (1).webp',
-  '/mobile-background/couple (2).webp',
-  '/mobile-background/couple (3).webp',
+  '/front/couple (1).png',
+  '/front/couple (2).png',
+  '/front/couple (3).png',
   '/mobile-background/couple (4).webp',
   '/mobile-background/couple (5).webp',
 ];
@@ -82,9 +82,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
   const images = useMemo(() => (isMobile ? mobileImages : desktopImages), [isMobile]);
 
   return (
-    <div className={`fixed inset-0 z-30 flex items-center justify-center overflow-hidden transition-opacity duration-500 ${visible ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-30 flex items-center justify-center overflow-hidden transition-opacity duration-500 h-[100dvh] ${visible ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
       {/* Background Image Carousel */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 w-full h-full">
         {images.map((src, i) => {
           const isActive = i === index;
           const isVisible = isActive || imagesLoaded.has(src);
@@ -100,6 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
                   : 'opacity-0 scale-105'
               }`}
               style={{
+                objectPosition: isMobile ? 'center center' : 'center center',
                 transition: 'opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
                 visibility: isVisible ? 'visible' : 'hidden',
               }}
@@ -185,9 +186,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             </span>
           </button>
         </div>
-
-        {/* Bottom Spacer */}
-        <div className="h-4" />
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ export const siteConfig = {
     venue: "Pan Resort and Hotel",
     address: "",
     date: "FEB 21, 2026",
-    time: "Reception to follow",
+    time: "5:00 PM",
   },
   dressCode: {
     theme: "Purple & Sage Motif",
