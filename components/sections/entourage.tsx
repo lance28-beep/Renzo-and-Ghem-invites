@@ -158,7 +158,7 @@ export function Entourage() {
       align === "right" ? "text-right" : align === "left" ? "text-left" : "text-center"
     return (
        <h3
-         className={`relative ${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg font-extrabold uppercase text-[#111814] mb-2 sm:mb-2.5 md:mb-3 tracking-[0.14em] sm:tracking-[0.18em] ${textAlign} ${className} transition-all duration-300 whitespace-nowrap`}
+         className={`relative ${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg font-extrabold uppercase text-[#111814] mb-2 sm:mb-2.5 md:mb-3 tracking-[0.14em] sm:tracking-[0.18em] ${textAlign} ${className} transition-all duration-300 whitespace-nowrap max-[349px]:whitespace-normal`}
        >
         {children}
       </h3>
@@ -193,7 +193,7 @@ export function Entourage() {
         </p>
         {showRole && member.RoleTitle && (
           <p
-            className={`relative text-[#556457] text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium mt-0.5 leading-tight sm:leading-snug ${textAlign} tracking-wide uppercase group-hover/item:text-[#37413A] transition-colors duration-300`}
+            className={`relative text-[#556457] text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium mt-0.5 leading-tight sm:leading-snug text-center tracking-wide uppercase group-hover/item:text-[#37413A] transition-colors duration-300`}
           >
             {member.RoleTitle}
           </p>
@@ -220,7 +220,7 @@ export function Entourage() {
       return (
         <div className="mb-3 sm:mb-4 md:mb-6 lg:mb-8">
           <SectionTitle>{singleTitle}</SectionTitle>
-          <div className={`grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 gap-y-1 sm:gap-y-1.5 md:gap-y-2 ${centerContent ? 'max-w-2xl mx-auto' : ''}`}>
+          <div className={`grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 gap-y-1 sm:gap-y-1.5 md:gap-y-2 justify-items-center max-[349px]:justify-center ${centerContent ? 'max-w-2xl mx-auto' : ''}`}>
             {children}
           </div>
         </div>
@@ -229,15 +229,15 @@ export function Entourage() {
 
     return (
       <div className="mb-3 sm:mb-4 md:mb-6 lg:mb-8">
-        <div className="grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 mb-1.5 sm:mb-2 md:mb-3">
+        <div className="max-[349px]:flex max-[349px]:flex-row max-[349px]:justify-center max-[349px]:items-center max-[349px]:gap-2 grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 mb-1.5 sm:mb-2 md:mb-3 max-[349px]:mb-2">
           {leftTitle && (
-            <SectionTitle align="right" className="pr-2 sm:pr-3 md:pr-4">{leftTitle}</SectionTitle>
+            <SectionTitle align="right" className="pr-2 sm:pr-3 md:pr-4 max-[349px]:text-center max-[349px]:pr-0 max-[349px]:whitespace-normal">{leftTitle}</SectionTitle>
           )}
           {rightTitle && (
-            <SectionTitle align="left" className="pl-2 sm:pl-3 md:pl-4">{rightTitle}</SectionTitle>
+            <SectionTitle align="left" className="pl-2 sm:pl-3 md:pl-4 max-[349px]:text-center max-[349px]:pl-0 max-[349px]:whitespace-normal">{rightTitle}</SectionTitle>
           )}
         </div>
-        <div className={`grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 gap-y-1 sm:gap-y-1.5 md:gap-y-2 ${centerContent ? 'max-w-2xl mx-auto' : ''}`}>
+        <div className={`grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-1.5 sm:gap-x-2 md:gap-x-3 gap-y-1 sm:gap-y-1.5 md:gap-y-2 justify-items-center max-[349px]:justify-center ${centerContent ? 'max-w-2xl mx-auto' : ''}`}>
           {children}
         </div>
       </div>
