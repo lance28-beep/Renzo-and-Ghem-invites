@@ -14,11 +14,11 @@ const desktopImages: string[] = [
 ];
 
 const mobileImages: string[] = [
-  '/mobile-background/couple (6).webp',
-  '/mobile-background/couple (7).webp',
-  '/front/couple (1).png',
-  '/front/couple (2).png',
-  '/front/couple (3).png',
+  '/frontpage/couple (1).webp',
+  '/frontpage/couple (2).webp',
+  '/frontpage/couple (3).webp',
+  '/frontpage/couple (4).webp',
+  '/frontpage/couple (5).webp',
 ];
 
 const SHOW_BUTTERFLIES = false
