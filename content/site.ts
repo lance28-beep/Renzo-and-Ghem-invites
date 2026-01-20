@@ -25,7 +25,7 @@ export const siteConfig = {
     venue: "San Isidro Parish Church",
     address: "",
     date: "February 21 2026",
-    day: "Friday",
+    day: "Saturday",
     time: "3:00 PM",
     entourageTime: "2:00 PM",
     guestsTime: "2:30 PM",
